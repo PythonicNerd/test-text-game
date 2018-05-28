@@ -22,6 +22,11 @@ def handle_choices(option1, option2):
             print("Sorry, that wasn't a correct choice! Please choose either [1] or [2]")
             print('\n')
 
+def lose():
+    print("You lose!")
+    print("Hit enter to continue!")
+    input()
+    exit()
 # Beginning of the game
 
 name = input("Hello, what's your name?")
@@ -77,3 +82,13 @@ elif not street:
         except:
             print("Sorry, that wasn't a correct choice! Please choose either [1] or [2]")
             print('\n')
+    clear()
+    if pump:
+        print("After receiving the contract, you walk down the streets, hearing 'Lil Pump yell \"Seventy\" and \"Eskettit\". After following the voices you get a glimpse of 'Lil Pump's muscley stature. You consider different ways to fight him, and think of 2.")
+        fight = handle_choices("challenge 'Lil Pump to fist-fight", "challenge 'Lil Pump to a battle of the minds")
+
+        clear()
+
+        if fight:
+            print("'Lil Pump is a bit hunkier than you expected! You are promptly kachigga'd by the Pump's insase physical prowess")
+            lose()
